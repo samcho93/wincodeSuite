@@ -6,6 +6,7 @@ the suite also runs the servers those programs need.
 | Program | What it is for | Project |
 |---|---|---|
 | **Stage Editor** | Build a 3D stage from a fixture library (Wincode models, Open Fixture Library, GDTF) and watch it follow DMX | [wincodeMovingHead](https://github.com/samcho93/wincodeMovingHead) |
+| **Stage Builder** | Build the stage itself: room size and truss rig (straight, tower, circle, arc); the Stage Editor and the simulator load it | wincodeMovingHead |
 | **Fixture Simulator** | One Wincode moving head in full detail: channels, panel and menu, optics | wincodeMovingHead |
 | **DMX Studio** | Lighting console: programmer, palettes, cue lists, effects, playbacks | [wincodeDmxStudio](https://github.com/samcho93/wincodeDmxStudio) |
 | **DMX Editor** | Scenes, chasers and EFX on a timeline; the show the Stage Editor plays | wincodeMovingHead |
