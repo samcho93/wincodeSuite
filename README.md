@@ -11,7 +11,8 @@ the suite also runs the servers those programs need.
 | **DMX Studio** | Lighting console: programmer, palettes, cue lists, effects, playbacks | [wincodeDmxStudio](https://github.com/samcho93/wincodeDmxStudio) |
 | **DMX Editor** | Scenes, chasers and EFX on a timeline; the show the Stage Editor plays | wincodeMovingHead |
 | **DMX Transmitter** | A bank of channel sliders for quick tests | wincodeMovingHead |
-| **Node Manager** | Find, configure, commission and monitor eDMX nodes, pixel nodes, hubs and winches | [wincodeNodeManager](https://github.com/samcho93/wincodeNodeManager) |
+| **Node Manager** | Find, configure, commission and monitor eDMX nodes, pixel nodes, hubs and winches; a Simulator of the virtual winches and pixel nodes | [wincodeNodeManager](https://github.com/samcho93/wincodeNodeManager) |
+| **Node Hardware** | Circuit diagrams and ESP32 firmware for the winch and the pixel node (documentation only — nothing to run) | [wincodeNodeHardware](https://github.com/samcho93/wincodeNodeHardware) |
 
 ## Run
 

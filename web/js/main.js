@@ -43,13 +43,13 @@ function drawServices() {
 function drawApps() {
   fill($('#groups'), GROUPS.map(g => h('section', { class: `group g-${g.id}` }, h('h2', null, g.name, h('span', null, g.about)),
     h('div', { class: 'cards' }, APPS.filter(a => a.group === g.id).map(a => {
-      const s = service(a.service), here = local && s && s.running, url = here ? origin(s) + a.local : a.online;
+      const s = service(a.service), here = local && s && s.running, url = here ? origin(s) + a.local : a.online, docs = !a.service;   // docs: nothing to run, only a published page
       return h('article', { class: 'card', id: 'app-' + a.id },
         h('div', { class: 'head' }, h('span', { class: 'ic' }, a.icon), h('div', null, h('h3', null, a.name), h('div', { class: 'tag' }, a.tag))),
         h('p', null, a.about), h('ul', null, a.points.map(p => h('li', null, p))),
         h('div', { class: 'acts' }, h('a', { class: 'btn go', href: url, target: 'wincode-' + a.id, title: url }, 'Open ', a.name),
           a.links.map(l => { const href = hrefOf(a, l); return href && h('a', { class: 'btn sm', href, target: 'wincode-doc', title: l.title || `${l.label} — ${a.name}` }, l.label); })),
-        h('div', { class: 'where' }, local ? [h('span', { class: 'dot ' + (here ? 'ok' : 'warn') }), here ? `This computer · ${url.replace(/^http:\/\//, '')}` : `${s ? s.name : 'Its server'} is not running — Open goes to the online version`] : `Online · ${url.replace(/^https:\/\//, '')}`));
+        h('div', { class: 'where' }, docs ? `Documentation · ${url.replace(/^https:\/\//, '')}` : local ? [h('span', { class: 'dot ' + (here ? 'ok' : 'warn') }), here ? `This computer · ${url.replace(/^http:\/\//, '')}` : `${s ? s.name : 'Its server'} is not running — Open goes to the online version`] : `Online · ${url.replace(/^https:\/\//, '')}`));
     })))));
 }
 async function refresh() {

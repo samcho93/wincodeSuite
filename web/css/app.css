@@ -1,6 +1,6 @@
 /* Wincode Lighting Suite — hub page */
 :root { color-scheme: dark; --bg: #0b0d10; --panel: #14181d; --panel2: #1a1f26; --line: #2a313b; --text: #e2e7ee; --dim: #8d97a5; --acc: #ff8a1f; --acc2: #2aa3ff; --ok: #35c66b; --red: #e5484d; --yellow: #f2c94c;
-  --see: #2aa3ff; --control: #ff8a1f; --network: #35c66b; }
+  --see: #2aa3ff; --control: #ff8a1f; --network: #35c66b; --hardware: #b07cff; }
 * { box-sizing: border-box; } html, body { margin: 0; }
 body { background: var(--bg); color: var(--text); font: 14px/1.5 "Segoe UI", "Malgun Gothic", system-ui, sans-serif; }
 a { color: var(--acc2); } button { font: inherit; color: inherit; }
@@ -25,7 +25,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 0 20px 60px; }
 .group { margin-top: 30px; } .group > h2 { margin: 0; font-size: 19px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; } .group > h2 span { font-size: 13px; font-weight: 400; color: var(--dim); }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; margin-top: 12px; }
 .card { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--dim); border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; }
-.g-see .card { border-top-color: var(--see); } .g-control .card { border-top-color: var(--control); } .g-network .card { border-top-color: var(--network); }
+.g-see .card { border-top-color: var(--see); } .g-control .card { border-top-color: var(--control); } .g-network .card { border-top-color: var(--network); } .g-hardware .card { border-top-color: var(--hardware); }
 .card .head { display: flex; gap: 12px; align-items: center; } .card .ic { font-size: 30px; line-height: 1; } .card h3 { margin: 0; font-size: 18px; } .card .tag { color: var(--dim); font-size: 12px; text-transform: uppercase; letter-spacing: .6px; }
 .card p { margin: 12px 0 8px; } .card ul { margin: 0 0 14px; padding-left: 18px; color: var(--dim); font-size: 13px; } .card li { margin: 3px 0; }
 .card .acts { margin-top: auto; display: flex; gap: 7px; flex-wrap: wrap; align-items: center; } .card .where { margin-top: 9px; font-size: 12px; color: var(--dim); display: flex; gap: 6px; align-items: center; }
