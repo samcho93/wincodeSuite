@@ -51,8 +51,7 @@ Folders elsewhere: create `suite.config.json` next to `package.json`:
 
 ## The hub page
 
-One card per program — what it is for, an **Open** button, its manuals and tutorials (English and Korean) and its
-source. With the launcher running, *Open* goes to the program on your computer; a program whose server is stopped,
+One card per program — what it is for, an **Open** button, its manuals and tutorials (English and Korean). With the launcher running, *Open* goes to the program on your computer; a program whose server is stopped,
 and the page opened without the launcher (a static web host), go to the published version on GitHub Pages.
 
 Run locally, the programs share one origin (`127.0.0.1:7740`), which is what lets DMX Studio drive the 3D stage over

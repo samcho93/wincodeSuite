@@ -48,8 +48,7 @@ function drawApps() {
         h('div', { class: 'head' }, h('span', { class: 'ic' }, a.icon), h('div', null, h('h3', null, a.name), h('div', { class: 'tag' }, a.tag))),
         h('p', null, a.about), h('ul', null, a.points.map(p => h('li', null, p))),
         h('div', { class: 'acts' }, h('a', { class: 'btn go', href: url, target: 'wincode-' + a.id, title: url }, 'Open ', a.name),
-          a.links.map(l => { const href = hrefOf(a, l); return href && h('a', { class: 'btn sm', href, target: 'wincode-doc', title: l.title || `${l.label} — ${a.name}` }, l.label); }),
-          h('a', { class: 'btn sm ghost', href: a.repo, target: '_blank', rel: 'noopener', title: 'Source code' }, 'Source')),
+          a.links.map(l => { const href = hrefOf(a, l); return href && h('a', { class: 'btn sm', href, target: 'wincode-doc', title: l.title || `${l.label} — ${a.name}` }, l.label); })),
         h('div', { class: 'where' }, local ? [h('span', { class: 'dot ' + (here ? 'ok' : 'warn') }), here ? `This computer · ${url.replace(/^http:\/\//, '')}` : `${s ? s.name : 'Its server'} is not running — Open goes to the online version`] : `Online · ${url.replace(/^https:\/\//, '')}`));
     })))));
 }
@@ -63,7 +62,6 @@ async function refresh() {
 
 fill($('#flow'), FLOW.map(f => h('div', { class: 'flow' }, h('div', { class: 'line' }, f.from, ' → ', f.to, h('span', { class: 'how' }, f.how)), h('p', null, f.about))));
 fill($('#foot'), 'Run everything on your own computer: clone the four repositories side by side (', h('code', null, 'wincodeSuite'), ', ', h('code', null, 'wincodeMovingHead'), ', ', h('code', null, 'wincodeDmxStudio'), ', ', h('code', null, 'wincodeNodeManager'),
-  ') and run ', h('code', null, 'npm start'), ' in ', h('code', null, 'wincodeSuite'), '. Local programs share one origin, which is what lets DMX Studio drive the 3D stage. · ',
-  h('a', { href: 'https://github.com/samcho93/wincodeSuite', target: '_blank', rel: 'noopener' }, 'github.com/samcho93/wincodeSuite'));
+  ') and run ', h('code', null, 'npm start'), ' in ', h('code', null, 'wincodeSuite'), '. Local programs share one origin, which is what lets DMX Studio drive the 3D stage.');
 await refresh();
 setInterval(() => { if (local || document.visibilityState === 'visible') refresh(); }, 2500);
