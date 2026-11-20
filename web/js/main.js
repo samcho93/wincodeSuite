@@ -64,4 +64,5 @@ fill($('#flow'), FLOW.map(f => h('div', { class: 'flow' }, h('div', { class: 'li
 fill($('#foot'), 'Run everything on your own computer: clone the four repositories side by side (', h('code', null, 'wincodeSuite'), ', ', h('code', null, 'wincodeMovingHead'), ', ', h('code', null, 'wincodeDmxStudio'), ', ', h('code', null, 'wincodeNodeManager'),
   ') and run ', h('code', null, 'npm start'), ' in ', h('code', null, 'wincodeSuite'), '. Local programs share one origin, which is what lets DMX Studio drive the 3D stage.');
 await refresh();
-setInterval(() => { if (local || document.visibilityState === 'visible') refresh(); }, 2500);
+// keep watching only where a launcher was found: on a static host the status request would fail every time
+if (local) setInterval(refresh, 2500);
