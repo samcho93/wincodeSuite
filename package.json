@@ -1,0 +1,12 @@
+{
+  "name": "wincode-suite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Wincode Lighting Suite — one hub and one launcher for the Fixture Simulator, Stage Editor, DMX Studio, DMX Editor and Node Manager",
+  "main": "server/index.mjs",
+  "scripts": {
+    "start": "node server/index.mjs",
+    "hub": "node server/index.mjs --no-start"
+  }
+}
