@@ -44,7 +44,7 @@ export const APPS = [
     service: 'simulator', local: '/console.html', online: `${PAGES}/wincodeMovingHead/console.html`, repo: `${GH}/wincodeMovingHead`, links: [] },
   { id: 'nodes', group: 'network', icon: '🖧', name: 'Node Manager', tag: 'configuration · commissioning · monitoring',
     about: 'Finds the Wincode nodes on a lighting network, configures them, sets up a whole rig in a few steps and shows what every node is doing: eDMX nodes, pixel nodes, hubs and kinetic winches.',
-    points: ['Discovery, per-device configuration, universe map, alarms, event log', 'Commissioning tools: number universes, copy settings, backup and restore', 'Virtual devices with a Simulator: winches move and pixels light with real DMX'],
+    points: ['Discovery, per-device configuration, universe map, alarms, event log', 'Commissioning tools: number universes, copy settings, backup and restore', 'Virtual devices with a Simulator: winches move, pixels light, eDMX ports merge real DMX'],
     service: 'nodemanager', local: '/', online: `${PAGES}/wincodeNodeManager/`, repo: `${GH}/wincodeNodeManager`,
     links: [{ label: 'Manual', local: '/manual/en.html', online: `${PAGES}/wincodeNodeManager/manual/en.html` }, { label: '한글', title: '사용 설명서 (한국어)', local: '/manual/ko.html', online: `${PAGES}/wincodeNodeManager/manual/ko.html` },
       { label: 'Tutorials', local: '/manual/tutorial-en.html', online: `${PAGES}/wincodeNodeManager/manual/tutorial-en.html` }, { label: '튜토리얼', title: '튜토리얼 (한국어)', local: '/manual/tutorial-ko.html', online: `${PAGES}/wincodeNodeManager/manual/tutorial-ko.html` },
@@ -54,10 +54,10 @@ export const APPS = [
 /** how the programs work together — drawn as a strip under the cards */
 // a card without `service` has no local server: it always opens its published page
 APPS.push({ id: 'hardware', group: 'hardware', icon: '🔌', name: 'Node Hardware', tag: 'circuit diagrams · ESP32 firmware',
-  about: 'The real nodes behind the Node Manager: block diagrams with pins and parts for the core board, the kinetic winch and the pixel node, and the ESP32 firmware that implements the device API.',
-  points: ['Core board: ESP32, Ethernet (LAN8720), 24 V power, USB-C programming', 'WN-WINCH: stepper with brake, limit switches, E-stop chain · WN-PIX4: four pixel outputs', 'ESP-IDF firmware: discovery, HTTP API, Art-Net / sACN, the same behaviour as the simulator'],
+  about: 'The real nodes behind the Node Manager: block diagrams with pins and parts for the core board, the kinetic winch, the pixel node and the eDMX node, and the ESP32 firmware that implements the device API.',
+  points: ['Core board: ESP32, Ethernet (LAN8720), 24 V power, USB-C programming', 'WN-WINCH: stepper with brake, limits, E-stop · WN-PIX4: four pixel outputs · WN-DMX2: two DMX512 ports', 'ESP-IDF firmware: discovery, HTTP API, Art-Net / sACN, the same behaviour as the simulator'],
   online: `${PAGES}/wincodeNodeHardware/`, repo: `${GH}/wincodeNodeHardware`,
-  links: [{ label: 'Winch', title: 'The winch section', online: `${PAGES}/wincodeNodeHardware/#winch` }, { label: 'Pixel node', title: 'The pixel node section', online: `${PAGES}/wincodeNodeHardware/#pixel` }, { label: 'Firmware', title: 'Firmware and how to build it', online: `${PAGES}/wincodeNodeHardware/#firmware` }] });
+  links: [{ label: 'Winch', title: 'The winch section', online: `${PAGES}/wincodeNodeHardware/#winch` }, { label: 'Pixel node', title: 'The pixel node section', online: `${PAGES}/wincodeNodeHardware/#pixel` }, { label: 'eDMX', title: 'The eDMX node section', online: `${PAGES}/wincodeNodeHardware/#edmx` }, { label: 'Firmware', title: 'Firmware and how to build it', online: `${PAGES}/wincodeNodeHardware/#firmware` }] });
 
 export const FLOW = [
   { from: 'DMX Studio', to: 'Stage Editor', how: 'Virtual DMX cable', about: 'Patch in the studio, press 3D Stage: the stage shows the same fixtures and follows every cue.' },
