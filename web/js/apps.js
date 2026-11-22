@@ -27,7 +27,7 @@ export const APPS = [
   { id: 'simulator', group: 'see', icon: '🔦', name: 'Fixture Simulator', tag: 'one fixture · digital twin',
     about: 'One Wincode moving head in full detail: its real channel chart, its front panel and menu, reset sequence, optics and beam. The place to learn a fixture before it is on the truss.',
     points: ['250W BSW · 500W Frame · ApexPointe 420 · Mega480 · AquaVortex TB5', 'Working LCD panel and menu, built-in programs, RDM', 'DMX in from the virtual cable, Art-Net, sACN or a serial adapter'],
-    service: 'simulator', local: '/', online: `${PAGES}/wincodeMovingHead/index.html`, repo: `${GH}/wincodeMovingHead`, links: [] },
+    service: 'simulator', local: '/', online: `${PAGES}/wincodeMovingHead/`, repo: `${GH}/wincodeMovingHead`, links: [] },
   { id: 'studio', group: 'control', icon: '🎚', name: 'DMX Studio', tag: 'lighting console',
     about: 'A lighting console in the browser, working the way professional desks do: select fixtures, set values in the programmer, store groups, palettes and cues, add effects, play back from faders.',
     points: ['Programmer, palettes, cue lists with tracking, effects, playbacks, command line', 'Up to 64 universes; Virtual DMX cable, Art-Net, sACN, DMX USB Pro', 'Same fixture library as the Stage Editor — one click hands the patch to the 3D stage'],
